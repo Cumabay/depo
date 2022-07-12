@@ -5,6 +5,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { Pallet } from './pallets/entities/pallet.entity';
 import { PalletsModule } from './pallets/pallets.module';
+import { TrucksModule } from './trucks/trucks.module';
 
 @Module({
   imports: [
@@ -20,6 +21,7 @@ import { PalletsModule } from './pallets/pallets.module';
       synchronize: true,
     }),
     PalletsModule,
+    TrucksModule,
   ],
   controllers: [AppController],
   providers: [AppService],
