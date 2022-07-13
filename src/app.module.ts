@@ -5,6 +5,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { Pallet } from './pallets/entities/pallet.entity';
 import { PalletsModule } from './pallets/pallets.module';
+import { Truck } from './trucks/entities/truck.entity';
 import { TrucksModule } from './trucks/trucks.module';
 
 @Module({
@@ -16,7 +17,7 @@ import { TrucksModule } from './trucks/trucks.module';
       username: 'root',
       password: 'root',
       database: 'mydbdepo',
-      entities: [Pallet],
+      entities: [Pallet, Truck],
       // logging: false,
       synchronize: true,
     }),
