@@ -20,13 +20,13 @@ export class TrucksController {
     return this.trucksService.create(createTruckDto);
   }
 
-  @Get()
+  @Get('')
   findAll() {
     return this.trucksService.findAll();
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string) {
+  findOne(@Param('id') id: string): string {
     return this.trucksService.findOne(+id);
   }
 
