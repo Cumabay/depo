@@ -14,8 +14,12 @@ export class User {
   id: number;
 
   @ApiProperty({ example: 'Login', description: 'Логин' })
-  @Column()
+  @Column({ unique: true, nullable: false })
   login: string;
+
+  @ApiProperty({ example: 'Password', description: 'Пароль' })
+  @Column({ nullable: false })
+  pass: string;
 
   @ApiProperty({ example: 'Admin', description: 'Роль: Админ' })
   @Column({
