@@ -8,9 +8,9 @@ import { PalletsModule } from './pallets/pallets.module';
 import { Truck } from './trucks/entities/truck.entity';
 import { TrucksModule } from './trucks/trucks.module';
 import { AuthModule } from './auth/auth.module';
-import { UsersModule } from './users/users.module';
 import { RolesModule } from './roles/roles.module';
 import { UsersModule } from './users/users.module';
+import { User } from './users/entities/user.entity';
 
 @Module({
   imports: [
@@ -21,7 +21,7 @@ import { UsersModule } from './users/users.module';
       username: 'root',
       password: 'root',
       database: 'mydbdepo',
-      entities: [Pallet, Truck],
+      entities: [Pallet, Truck, User],
       // logging: false,
       synchronize: true,
     }),
