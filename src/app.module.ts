@@ -7,6 +7,10 @@ import { Pallet } from './pallets/entities/pallet.entity';
 import { PalletsModule } from './pallets/pallets.module';
 import { Truck } from './trucks/entities/truck.entity';
 import { TrucksModule } from './trucks/trucks.module';
+import { AuthModule } from './auth/auth.module';
+import { UsersModule } from './users/users.module';
+import { RolesModule } from './roles/roles.module';
+import { UsersModule } from './users/users.module';
 
 @Module({
   imports: [
@@ -23,6 +27,9 @@ import { TrucksModule } from './trucks/trucks.module';
     }),
     PalletsModule,
     TrucksModule,
+    AuthModule,
+    UsersModule,
+    RolesModule,
   ],
   controllers: [AppController],
   providers: [AppService],
